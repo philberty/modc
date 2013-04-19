@@ -1,0 +1,19 @@
+CMOD - Basic Modula Compiler for i386
+=====================================
+
+Lead Developer:
+
+     * Philip Herron - redbrain@gcc.gnu.org
+       	      	     - redbrain@crules.org
+       	      	     - pherron02@qub.ac.uk
+
+- If you have made contributions to this your name belongs here, poke
+me to add it!
+
+
+Thanks
+------
+
+This is work towards a more useful compiler to work in conjunction to
+Programming Implementation compiler course for Queens University Belfast
+( CSC3021 )

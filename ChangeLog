@@ -1,0 +1,224 @@
+2010-11-10  redbrain <redbrain@gcc.gnu.org>
+
+	added more readme info
+
+2010-11-10  redbrain <redbrain@gcc.gnu.org>
+
+	commited lots of windows build bug fixes
+
+2010-11-10  redbrain <redbrain@gcc.gnu.org>
+
+	some windows fixes
+
+2010-11-10  redbrain <redbrain@gcc.gnu.org>
+
+	quick cleanup
+
+2010-11-10  redbrain <redbrain@gcc.gnu.org>
+
+	plenty more platform checks
+
+2010-11-10  redbrain <redbrain@gcc.gnu.org>
+
+	some cleanups
+
+2010-11-09  redbrain <redbrain@gcc.gnu.org>
+
+	test
+
+2010-11-09  redbrain <redbrain@gcc.gnu.org>
+
+	updated .gitignore
+
+2010-11-09  redbrain <redbrain@gcc.gnu.org>
+
+	working cmake system
+
+2010-11-09  redbrain <redbrain@gcc.gnu.org>
+
+	added config base
+
+2010-11-09  Philip Herron <redbrain@beta.(none)>
+
+	creating cmake skelton
+
+2010-11-08  Philip Herron <redbrain@gcc.gnu.org>
+
+	outputs apple asm that compiles but sigsegv so far
+
+2010-11-08  Philip Herron <redbrain@gcc.gnu.org>
+
+	quick clean up
+
+2010-11-08  Philip Herron <redbrain@gcc.gnu.org>
+
+	updated changelog
+
+2010-11-08  Philip Herron <redbrain@gcc.gnu.org>
+
+	cleanups to produce code for macosx snow leapord
+
+2010-11-04  redbrain <redbrain@gcc.gnu.org>
+
+	fix from merge cruft
+
+2010-11-04  redbrain <redbrain@gcc.gnu.org>
+
+	some small fixes
+
+2010-11-04  Philip Herron <redbrain@alpha.(none)>
+
+	lets keep the stack dword aligned
+
+2010-11-02  redbrain <redbrain@gcc.gnu.org>
+
+	quick commit
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	fix small bug in generated code
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	initial conditional backend code
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	fix some meta output
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	fixed ir code gen for conditionals
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	curr test
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	initial conditionals support
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	massive bug fixes
+
+2010-11-01  redbrain <redbrain@gcc.gnu.org>
+
+	plenty more parser code
+
+2010-10-28  redbrain <redbrain@gcc.gnu.org>
+
+	quick test
+
+2010-10-27  redbrain <redbrain@gcc.gnu.org>
+
+	Merge branch 'master', remote branch 'origin/master'
+
+2010-10-27  Philip Herron <redbrain@gcc.gnu.org>
+
+	some bug fixes
+
+2010-10-27  Philip Herron <redbrain@gcc.gnu.org>
+
+	updated changelog
+
+2010-10-27  redbrain <redbrain@gcc.gnu.org>
+
+	bug fix on handle of undefined symbols
+
+2010-10-27  redbrain <redbrain@gcc.gnu.org>
+
+	quick bug fix
+
+2010-10-27  redbrain <redbrain@gcc.gnu.org>
+
+	updated readme
+
+2010-10-27  redbrain <redbrain@gcc.gnu.org>
+
+	working for test case T1.t
+
+2010-10-26  redbrain <redbrain@gcc.gnu.org>
+
+	bug fixes and cleanups to code gen in progress
+
+2010-10-26  redbrain <redbrain@gcc.gnu.org>
+
+	outputting some code
+
+2010-10-24  redbrain <redbrain@gcc.gnu.org>
+
+	some backend code
+
+2010-10-21  redbrain <redbrain@gcc.gnu.org>
+
+	added changelog
+
+2010-10-21  redbrain <redbrain@gcc.gnu.org>
+
+	added in main and updated gitignore
+
+2010-10-21  redbrain <redbrain@gcc.gnu.org>
+
+	large updates
+
+2010-10-19  redbrain <redbrain@gcc.gnu.org>
+
+	some more call checking
+
+2010-10-19  redbrain <redbrain@gcc.gnu.org>
+
+	large bug fixes in the expression transformation
+
+2010-10-11  redbrain <redbrain@gcc.gnu.org>
+
+	in progreess of fixing up the expression handling ir checks and transforms
+
+2010-10-10  redbrain <redbrain@gcc.gnu.org>
+
+	update ignore list
+
+2010-10-10  redbrain <redbrain@gcc.gnu.org>
+
+	lots and lots of translation unit checking code
+
+2010-10-09  redbrain <redbrain@gcc.gnu.org>
+
+	more ir code
+
+2010-10-05  redbrain <redbrain@gcc.gnu.org>
+
+	more ir code
+
+2010-10-05  redbrain <redbrain@gcc.gnu.org>
+
+	some ir gen code
+
+2010-10-04  redbrain <redbrain@gcc.gnu.org>
+
+	implemented the basic grammar structure works for example4 = the hard part is done
+
+2010-10-04  redbrain <redbrain@gcc.gnu.org>
+
+	some ir type code
+
+2010-10-04  redbrain <redbrain@gcc.gnu.org>
+
+	added more stuff working on mod-dot semantic IR
+
+2010-09-30  redbrain <redbrain@gcc.gnu.org>
+
+	fixed build system
+
+2010-09-30  redbrain <redbrain@gcc.gnu.org>
+
+	more stuff
+
+2010-09-30  redbrain <redbrain@gcc.gnu.org>
+
+	more build cruft
+
+2010-09-30  redbrain <redbrain@gcc.gnu.org>
+
+	initial commit
+

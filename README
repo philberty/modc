@@ -1,0 +1,146 @@
+                      CMOD - A Modula Compiler for i386
+                      =================================
+
+Compile & Installation
+----------------------
+
+Before you begin Cmod requires little in the way of depandancies,
+Perl is used for the testsuite driver, Flex and Bison are used for
+the parser. A C compiler i used for Compiling the compiler.
+
+On Debian/Ubuntu:
+
+  $ aptitude install flex bison perl build-essential
+
+Fedora:
+
+  $ yum install flex bison gcc perl
+
+Suse:
+
+  $ yast -i gcc flex bison perl
+
+Compilation for Unix systems follow standard gnu practices:
+
+  $ ./configure
+  $ make
+  $ make install
+
+If your compiling from GIT you will need to do:
+
+  $ sh config/autorun.sh
+
+Then continue on with configure make etc. Its worth noting that
+the custom configure option --with-debug=yes is very helpful,
+if you find a bug re-compile with --with-debug=yes and re-run the
+test. Even for tracing to see how things work its a useful option.
+If you find a bug contact one of the people in the AUTHORS and let
+them know, of course your free to fix it yourself if you wish and
+send the patch its free-software after all.
+
+ $ make test
+
+Will soon work so we can have a testsuite for the compiler to run
+to check for consistancy.
+
+/*
+  Worth noting that there should be fairly good cross compiler support
+  to suncc and intel cc its worth playing with :)
+*/
+
+For Windows this port uses Cmake, which you can also use on MacOSx or
+Unix if you prefer you can use it to generate Microsoft Visual C project
+files to work with the code in an IDE and same idea for Xcode on Mac.
+
+** Mac OSX + XCode
+-------------------
+# install cmake use the shell cd to the toplevel source dir
+
+  $ cmake -G Xcode .
+
+# open Xcode and file->open-project there should be an xcode
+# project file that xcode can open! Now you can work away in
+# xcode if you prefer
+
+** Windows (7) + MSVC / nmake
+--------------------------------
+# install cmake + MSVC express edition (Curr 2010)
+
+# install gnuwin32 flex + bison
+  * http://gnuwin32.sourceforge.net/packages/bison.htm
+  * http://gnuwin32.sourceforge.net/packages/flex.htm
+
+# add the C:\gnuwin32\bin to your system ${PATH}
+
+# IMPORTANT Do NOT install these programs to a location
+# which includes a folder with a space in its name.
+# For example by default it will want to install to
+# Program Files DONT do this simply chuck it in C:\gnuwin32
+# else m4.exe will fail.
+
+# test this by opening a command prompt
+  $ bison.exe
+  $ flex.exe
+# if they work your half way
+
+  $ cd C:\Program Files\Microsoft Visual Studio 9.0\VC
+# vssetenv.bat to set the envoirment variables for using cl.exe
+# in the shell. Test by exec cl.exe
+
+  $ cd <cmod-sources>
+
+-> For nmake simply:
+  $ cmake
+  $ nmake
+
+-> Visual Studio
+  $ cmake -G "Visual Studio 10"
+
+# open the workspace file (should be cmod.proj or somthing).
+
+Note you can also use cygwin on Windows and follow the unix installation
+instructions for using autotools.
+
+Common Usage
+------------
+
+$ cmod.exe "bla.mod"   // on Windows
+
+else:
+
+$ ./src/cmod bla.mod   // on unix if you haven't done make install
+                       // just run it from your dev dir
+
+It will give feedback on the file if the compiler detects typing error's
+or syntax errors etc.
+
+Outputs are:
+
+ * bla.mod.mod_dot
+
+Which is the IR this compiler uses which shows how your
+source code gets transfromed.
+
+ * bla.mod.S
+
+Which is the assembler output which is simple i386 code in an effort to be
+64 bit system compatible.
+
+* Linux
+You can do:
+$ gcc -g test.mod.S
+$ ./a.out
+
+or to see how the asm gets executed line by line...:
+
+$ gdb --args ./a.out
+ > start
+ > step
+ > step
+ .....
+
+* Note on MacOSX the asm code output can get assembled fine
+but sigsev on runtime i have to look into this but feel free to fix
+it yourself its free-software of course!
+
+* Windows 7 asm back-end to do. You could use cygwin and use the unix backend and try to use gas it should compile and run like that but i would prefer to get a more native solution using windows assembler.
