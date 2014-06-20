@@ -32,7 +32,7 @@ if test "$prefix" != "/"; then
 fi 
 
 dnl Checks for programs.
-AC_PROG_CC([icc cl gcc cc])
+AC_PROG_CC
 AC_DEFINE_UNQUOTED([CONFIG_CC], "$CC", [C Compiler used])
 
 AC_PROG_AWK
@@ -45,24 +45,11 @@ AC_CHECK_PROGS(AR, ar aal, ar)
 AC_PROG_CC_C99
 AC_PROG_CXX
 
-AC_MSG_CHECKING([Checking for a valid Perl interpreter!])
-AC_CHECK_PROGS(PERL, perl, )
-AC_PATH_PROGS(PERL, perl, )
-if test "x${PERL}" == "x"; then
-   AC_MSG_NOTICE([A valid Perl installation is \
-required to run the test suite!])
-   XPERL="no"
-else
-   XPERL="yes"
-fi
-
-AC_AIX
 AC_EXEEXT
 AC_GNU_SOURCE
 
 AC_PROG_INSTALL
 
-AC_LIBTOOL_DLOPEN
 AC_PROG_LIBTOOL
 AM_PROG_LIBTOOL
 
@@ -76,32 +63,6 @@ AC_C_INLINE
 AC_C_VOLATILE
 
 AC_CANONICAL_HOST
-
-
-CFLAGS_save="$CFLAGS"
-CFLAGS=""
-
-# Just to make sure we dont do debug on default!
-debug=no
-AC_ARG_WITH(debug,
-  [AS_HELP_STRING([--with-debug=yes/no],
-    [With Debug symbols, default no.])],
-  [debug="$withval"])
-
-if test "x$debug" == "xyes"; then
-  AC_DEFINE([DEBUG], 1, [Debug Symbols Flag])
-  #turn on extra debug compiler options :)
-  if test "x$CC" == "xgcc -std=gnu99"; then
-     CFLAGS="$CFLAGS -g -O2 -D_DEBUG -ggdb3 -pedantic -Wall -Wextra -fstrict-aliasing"
-  fi   
-fi
-
-#some optimizations for gcc add support for other compilers soon
-if test "x$debug" == "xno"; then
-  if test "x$CC" == "xgcc -std=gnu99"; then
-    CFLAGS="$CFLAGS -g -O3 -fwrapv -fstrict-aliasing -ffast-math -fstack-protector"
-  fi
-fi
 
 case "$host" in
   *apple*)
@@ -206,11 +167,11 @@ echo "   * Installation prefix:       $prefix"
 echo "   * System type:               $SYSTEM_TYPE"
 echo "   * Host CPU:                  $host_cpu"
 echo "   * C Compiler:                $CC"
+echo "   * CFLAGS:                    $CFLAGS"
+echo "   * LDFLAGS:                   $LDFLAGS"
 echo "   * YACC version:              $YACC"
 echo "   * LEX version:               $LEX"
-echo "   * Perl support:              $XPERL"
 echo "   * Multi-Precision:           $bignum"
-echo "   * DEBUG Symbols:             $debug"
 echo ""
 echo "---"
 
